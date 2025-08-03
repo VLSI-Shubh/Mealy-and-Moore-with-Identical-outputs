@@ -44,14 +44,6 @@ In the Moore version, the output becomes `1` **after** the entire sequence has b
 
 ---
 
-## 🧷 FSM State Diagram
-
-![FSM State Diagram](./images/fsm_diagram.png)
-
-This diagram shows the state transitions for detecting `1011`. The Mealy FSM uses 4 states, while the Moore FSM extends it to 5 states to isolate the output behavior.
-
----
-
 ## 📁 Project Files
 
 | File | Description |
