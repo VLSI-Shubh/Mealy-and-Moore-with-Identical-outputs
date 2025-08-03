@@ -51,7 +51,7 @@ In the Moore version, the output becomes `1` **after** the entire sequence has b
 This section compares the Mealy and Moore Finite State Machines (FSMs) designed to detect the sequence `1011`.
 
 ### 📘 Mealy State Diagram
-![Mealy FSM](https://raw.githubusercontent.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/main/images/mealy1011.png)
+![Mealy FSM](https://github.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/blob/2323711e27e40d0f7717e7e5fcd9f5972d52cdd1/images/mealy1011.png)
 
 - **States used**: 4  
 - **Output depends on**: Current state **and** input  
@@ -61,7 +61,7 @@ This section compares the Mealy and Moore Finite State Machines (FSMs) designed 
 ---
 
 ### 📗 Moore State Diagram
-![Moore FSM](https://raw.githubusercontent.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/main/images/moore1011.png)
+![Moore FSM](https://github.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/blob/2323711e27e40d0f7717e7e5fcd9f5972d52cdd1/images/moore1011.png)
 
 - **States used**: 5  
 - **Output depends only on**: Current state  
