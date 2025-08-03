@@ -44,7 +44,7 @@ In the Moore version, the output becomes `1` **after** the entire sequence has b
 
 ---
 
-## 🖼️ FSM State Diagram
+## 🧷 FSM State Diagram
 
 ![FSM State Diagram](./images/fsm_diagram.png)
 
@@ -76,3 +76,7 @@ This exercise helped deepen my understanding of **state-based design**, **output
 ## 📝 License
 
 Open for educational and personal use under the MIT License.
+
+## 🚀 About Me
+I'm a full stack developer...
+
