@@ -46,8 +46,6 @@ In the Moore version, the output becomes `1` **after** the entire sequence has b
 
 ## 🧷 FSM State Diagram
 
-## 🔁 FSM State Diagram
-
 This section compares the Mealy and Moore Finite State Machines (FSMs) designed to detect the sequence `1011`.
 
 ### 📘 Mealy State Diagram
