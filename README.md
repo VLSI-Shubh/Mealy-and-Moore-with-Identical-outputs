@@ -28,19 +28,11 @@ Both FSMs are written in Verilog, simulated, and visualized with waveforms to co
 
 ## 📊 Waveform Analysis
 
-### 🔵 Mealy FSM
+### 🔵 Mealy FSM and Moore FSM
 
-![Mealy Waveform](./images/mealy_waveform.png)
+![Mealy Waveform]([./images/mealy_waveform.png](https://github.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/blob/41232e4946d6591d45ca00b85afe55ef252ca170/images/output%20waveform.png))
 
-In the Mealy machine, the output `out = 1` is asserted during the **same cycle** when the final bit of the sequence (`1`) is received. This makes it slightly faster in terms of response, but it is also more sensitive to input transitions and prone to glitches if not timed carefully.
-
----
-
-### 🟢 Moore FSM
-
-![Moore Waveform](./images/moore_waveform.png)
-
-In the Moore version, the output becomes `1` **after** the entire sequence has been received and the FSM transitions into a dedicated "output" state. This results in a **one-cycle delay**, but provides more reliable and stable output — especially useful in real hardware systems where output stability matters.
+In the Mealy machine, the output `out = 1` is asserted during the **same cycle** when the final bit of the sequence (`1`) is received. This makes it slightly faster in terms of response, but it is also more sensitive to input transitions and prone to glitches if not timed carefully.Whereas in the Moore version, the output becomes `1` **after** the entire sequence has been received and the FSM transitions into a dedicated "output" state. This results in a **one-cycle delay**, but provides more reliable and stable output — especially useful in real hardware systems where output stability matters.
 
 ---
 
