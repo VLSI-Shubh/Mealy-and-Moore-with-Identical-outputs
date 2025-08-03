@@ -48,7 +48,7 @@ In the Moore version, the output becomes `1` **after** the entire sequence has b
 
 ![FSM State Diagram]
 
-[Mealy state diagram] (./images/mealy1011.png)
+[Mealy state diagram] (<img width="463" height="443" alt="Image" src="https://github.com/user-attachments/assets/ab619db1-538f-4594-bc2b-0a9bbfb11353" />)
 
 [Moore state diragram] (./images/moore1011.png)
 
