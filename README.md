@@ -47,10 +47,10 @@ In the Moore version, the output becomes `1` **after** the entire sequence has b
 ## 🧷 FSM State Diagram
 
 ![FSM State Diagram]
-
+Mealy FSM State Diragam :
 ![Mealy state diagram](https://github.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/blob/e9f68da4a89f3898115cff3bc48ca5c952a3567b/images/mealy1011.png)
-
-[Moore state diragram] (./images/moore1011.png)
+Moore FSM State Diagram :
+![Moore state diragram](https://github.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/blob/5e0973eb5539f92d3d73088a486129ff318a5f10/images/moore1011.png)
 
 This diagram shows the state transitions for detecting `1011`. The Mealy FSM uses 4 states, while the Moore FSM extends it to 5 states to isolate the output behavior.
 
