@@ -48,7 +48,7 @@ In the Moore version, the output becomes `1` **after** the entire sequence has b
 
 ![FSM State Diagram]
 
-![Mealy state diagram](https://raw.githubusercontent.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/main/images/mealy1011.png)
+![Mealy state diagram](https://raw.githubusercontent.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/images/mealy1011.png)
 
 [Moore state diragram] (./images/moore1011.png)
 
