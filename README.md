@@ -100,8 +100,3 @@ This exercise helped deepen my understanding of **state-based design**, **output
 
 Open for educational and personal use under the MIT License.
 
-## 🚀 About Me
-I'm a full stack developer...
-## 🚀 About Me
-I'm a full stack developer...
-
