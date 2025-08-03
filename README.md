@@ -73,8 +73,6 @@ This section compares the Mealy and Moore Finite State Machines (FSMs) designed 
 These diagrams clearly illustrate how both FSM models handle the same pattern detection logic using different architectural approaches.
 
 
-This diagram shows the state transitions for detecting `1011`. The Mealy FSM uses 4 states, while the Moore FSM extends it to 5 states to isolate the output behavior.
-
 ---
 
 ## 📁 Project Files
@@ -102,6 +100,8 @@ This exercise helped deepen my understanding of **state-based design**, **output
 
 Open for educational and personal use under the MIT License.
 
+## 🚀 About Me
+I'm a full stack developer...
 ## 🚀 About Me
 I'm a full stack developer...
 
