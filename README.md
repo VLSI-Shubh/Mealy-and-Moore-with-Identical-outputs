@@ -34,36 +34,45 @@ Both FSMs are written in Verilog, simulated, and visualized with waveforms to co
 
 In the Mealy machine, the output `out = 1` is asserted during the **same cycle** when the final bit of the sequence (`1`) is received. This makes it slightly faster in terms of response, but it is also more sensitive to input transitions and prone to glitches if not timed carefully.Whereas in the Moore version, the output becomes `1` **after** the entire sequence has been received and the FSM transitions into a dedicated "output" state. This results in a **one-cycle delay**, but provides more reliable and stable output — especially useful in real hardware systems where output stability matters.
 
-Here is an excerpt from the simulation console output (vvp) showing the input (in), clock (Clk), reset (reset), and the outputs of both the Mealy and Moore FSMs (mealy_output and moore_output). These outputs indicate when the sequence 1011 has been detected.
+## 🖥️ Simulation Output & Analysis
 
-in = 1 | Clk = 0 | reset = 0 | mealy_output = 0 | moore_output = 0 | Time = 40  
-in = 1 | Clk = 1 | reset = 0 | mealy_output = 1 | moore_output = 0 | Time = 45   <-- Mealy detects sequence immediately  
-in = 1 | Clk = 0 | reset = 0 | mealy_output = 1 | moore_output = 0 | Time = 50  
-in = 1 | Clk = 1 | reset = 1 | mealy_output = 0 | moore_output = 0 | Time = 55   <-- Reset asserted
-...  
-in = 1 | Clk = 1 | reset = 0 | mealy_output = 1 | moore_output = 0 | Time = 130  
-in = 1 | Clk = 1 | reset = 0 | mealy_output = 0 | moore_output = 1 | Time = 135   <-- Moore detects sequence with 1-cycle delay  
-...  
-in = 1 | Clk = 1 | reset = 0 | mealy_output = 1 | moore_output = 0 | Time = 165  
-in = 1 | Clk = 1 | reset = 0 | mealy_output = 0 | moore_output = 1 | Time = 175  
+Below is a selected excerpt from the simulation output showing the input (`in`), clock (`Clk`), reset (`reset`), and the outputs (`mealy_output` and `moore_output`). This highlights the moments when the sequence `1011` is detected by the FSMs.
 
-## 🔑 Key Observations
+| Time (ns) | in | Clk | reset | Mealy Output | Moore Output | Notes                                   |
+|-----------|----|-----|-------|--------------|--------------|-----------------------------------------|
+| 40        | 1  | 0   | 0     | 0            | 0            |                                         |
+| 45 (↑)    | 1  | 1   | 0     | 1            | 0            | Mealy detects sequence immediately      |
+| 50        | 1  | 0   | 0     | 1            | 0            |                                         |
+| 55 (↑)    | 1  | 1   | 1     | 0            | 0            | Reset asserted, Moore FSM reset soon    |
+| 125 (↑)   | 1  | 1   | 0     | 1            | 0            | Mealy detects sequence                   |
+| 135 (↑)   | 1  | 1   | 0     | 0            | 1            | Moore detects sequence (one clock cycle delay) |
+| 165 (↑)   | 1  | 1   | 0     | 1            | 0            | Mealy detects sequence                   |
+| 175 (↑)   | 1  | 1   | 0     | 0            | 1            | Moore output delayed                     |
+| 195 (↑)   | 1  | 1   | 0     | 1            | 0            | Mealy detects sequence                   |
+| 205 (↑)   | 1  | 1   | 0     | 0            | 1            | Moore output delayed                     |
+| 305 (↑)   | 1  | 1   | 0     | 1            | 0            | Mealy detects sequence                   |
+| 315 (↑)   | 1  | 1   | 0     | 0            | 1            | Moore output delayed                     |
 
-- The **Mealy FSM** asserts its output (`mealy_output = 1`) in the **same clock cycle** that the last bit of the sequence (`1`) arrives, resulting in **immediate detection**.
+**Note:** (↑) indicates the rising clock edge where outputs are sampled.
 
-- The **Moore FSM** asserts its output (`moore_output = 1`) **one clock cycle later** because the output depends **only on the FSM’s current state**, which updates after receiving the entire sequence.
+---
 
+### 🔑 Key Observations
+
+- The **Mealy FSM asserts its output (`mealy_output = 1`) in the same clock cycle** the last bit of the sequence (`1`) arrives, resulting in **immediate detection**.
+- The **Moore FSM asserts its output (`moore_output = 1`) one clock cycle later** because the output depends **only on the FSM’s current state**, which updates after receiving the entire sequence.
 - This delay in the Moore FSM provides **more stable and glitch-free output**, at the cost of **one clock cycle latency**.
-
 - The Mealy FSM’s outputs are faster but may be **more sensitive to glitches** due to output dependency on **both state and input**.
+
+---
 
 ### ❓ Explanation for Missing Moore Output near Time = 50
 
-- The Moore FSM requires **one clock cycle** to enter its dedicated output state after detecting the sequence. However, the simulation asserts the **reset signal at Time = 55 ns**, immediately following the Mealy FSM’s detection pulse around Time = 45–50 ns.
+The Moore FSM requires **one clock cycle** to enter its dedicated output state after detecting the sequence. However, the simulation asserts the **reset signal at Time = 55 ns**, immediately following the Mealy FSM’s detection pulse around Time = 45–50 ns.
 
-- Because the Moore FSM is **reset before it can assert its output in the next clock cycle**, **no Moore output pulse is observed near Time = 50 ns**. The reset clears the FSM’s state and interrupts its normal progression, preventing output assertion.
+Because the Moore FSM is **reset before it can assert its output in the next clock cycle**, **no Moore output pulse is observed near Time = 50 ns**. The reset clears the FSM’s state and interrupts its normal progression, preventing output assertion.
 
-- This highlights the importance of **reset timing** in simulations and hardware designs when analyzing FSM output behavior.
+This highlights the importance of **reset timing** in simulations and hardware designs when analyzing FSM output behavior.
 
 
 ---
