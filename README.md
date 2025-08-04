@@ -130,6 +130,8 @@ This project was developed, tested, and visualized using the following tools:
 | **EDA Playground** | Online Verilog editor and schematic viewer for quick prototyping |
 | **Vivado**       | RTL synthesis, schematic generation, and design analysis |
 
+---
+
 ## ✅ Conclusion
 
 Through this project, I have explored the **practical trade-offs between Mealy and Moore FSMs** by implementing both styles for the same sequence detection logic.  
