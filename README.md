@@ -119,6 +119,16 @@ These diagrams clearly illustrate how both FSM models handle the same pattern de
 | `*.vcd` | Simulation output for waveform viewing |
 
 ---
+## 🛠️ Tools Used
+
+This project was developed, tested, and visualized using the following tools:
+
+| Tool            | Purpose                                           |
+|------------------|---------------------------------------------------|
+| **Icarus Verilog** (`iverilog`) | Compilation and simulation of Verilog code |
+| **GTKWave**      | Viewing waveform outputs (`.vcd` files)          |
+| **EDA Playground** | Online Verilog editor and schematic viewer for quick prototyping |
+| **Vivado**       | RTL synthesis, schematic generation, and design analysis |
 
 ## ✅ Conclusion
 
