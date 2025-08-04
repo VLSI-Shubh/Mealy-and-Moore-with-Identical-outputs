@@ -64,6 +64,9 @@ Below is a selected excerpt from the simulation output showing the input (`in`),
 - This delay in the Moore FSM provides **more stable and glitch-free output**, at the cost of **one clock cycle latency**.
 - The Mealy FSM’s outputs are faster but may be **more sensitive to glitches** due to output dependency on **both state and input**.
 
+- - [Mealy FSM Schematic (PDF)](https://github.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/blob/459f38d5ddb47a088e9474b40c0dbce67115a60e/Circuit/Synthesized%20Circuit%20-%20Mealy.pdf)
+- [Moore FSM Schematic (PDF)](https://github.com/VLSI-Shubh/Mealy-and-Moore-with-Identical-outputs/blob/main/Circuit/Synthesized%20Circuit%20-%20Moore.pdf)
+
 ---
 
 ### ❓ Explanation for Missing Moore Output near Time = 50
